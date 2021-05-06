@@ -5,9 +5,13 @@ Home: https://wulffpack.materialsmodeling.org
 
 Package license: MPL-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wulffpack-feedstock/blob/master/LICENSE.txt)
 
 Summary: a package for Wulff constructions
+
+Development: https://gitlab.com/materials-modeling/wulffpack
+
+Documentation: https://wulffpack.materialsmodeling.org
 
 WulffPack is a Python package for making Wulff constructions,
 typically for finding equilibrium shapes of nanoparticles.
@@ -43,6 +47,7 @@ Installing `wulffpack` from the `conda-forge` channel can be achieved by adding 
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `wulffpack` can be installed with:
@@ -113,13 +118,14 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
 =====================
 
+* [@erhart1](https://github.com/erhart1/)
 * [@jan-janssen](https://github.com/jan-janssen/)
 
