@@ -1,5 +1,5 @@
 {% set name = "wulffpack" %}
-{% set version = "1.1" %}
+{% set version = "1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5c89d9b8b312ff09b528127e32d88b03db5aa478b22da4c74d677db068e151a6
+  sha256: ba7391371fbbc42c9dba406fa118d436faa15c8ee684102cd631f94104551845
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: MPL-2.0
   license_family: other
   license_file: LICENSE
-  summary: 'a package for Wulff constructions'
+  summary: a package for Wulff constructions
 
   description: |
     WulffPack is a Python package for making Wulff constructions,
