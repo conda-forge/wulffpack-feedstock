@@ -7,7 +7,7 @@ Home: https://wulffpack.materialsmodeling.org
 
 Package license: MPL-2.0
 
-Summary: a package for Wulff constructions
+Summary: A package for making Wulff constructions
 
 Development: https://gitlab.com/materials-modeling/wulffpack
 
