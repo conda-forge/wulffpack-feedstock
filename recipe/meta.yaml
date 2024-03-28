@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wulffpack-{{ version }}.tar.gz
   sha256: ef07b2a49179e446afb6d1f83b597c240cf21191d8afe3f943c35e019593b9b6
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
@@ -29,14 +29,17 @@ requirements:
 test:
   imports:
     - wulffpack
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://wulffpack.materialsmodeling.org
   license: MPL-2.0
   license_family: other
   license_file: LICENSE
-  summary: a package for Wulff constructions
-
+  summary: A package for making Wulff constructions
   description: |
     WulffPack is a Python package for making Wulff constructions,
     typically for finding equilibrium shapes of nanoparticles.
