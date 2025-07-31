@@ -1,5 +1,5 @@
 {% set name = "wulffpack" %}
-{% set version = "1.4" %}
+{% set version = "1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wulffpack-{{ version }}.tar.gz
-  sha256: f78264cc240731ce02ff3cf2a54d46488b1447a928962774961e05649e9885aa
+  sha256: 96ebb2977e4f66e574a4256e1eeb565ac138847a15f3a60007d2d34fbeb63315
 
 build:
   noarch: python
