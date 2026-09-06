@@ -35,7 +35,9 @@ tests:
       imports:
         - wulffpack
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
   license: MPL-2.0
